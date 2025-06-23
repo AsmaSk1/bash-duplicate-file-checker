@@ -1,0 +1,14 @@
+What the Script Does
+* Reads all files in a directory (recursively)
+* Converts filenames to lowercase and removes the extension
+* Compares files by name (without extension) and size
+* Reports possible duplicates
+
+| Original Issue                         | Improved In This Script         |
+| -------------------------------------- | ------------------------------- |
+| Inefficient nested find commands       | Single scan using `find`        |
+| Case-sensitive name match              | Converts names to lowercase     |
+| Multiple redundant checks              | Uses Bash associative arrays    |
+| Poor handling of filenames with spaces | Uses `-print0` and `IFS` safely |
+
+
